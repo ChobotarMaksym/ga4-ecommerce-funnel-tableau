@@ -3,7 +3,7 @@
 > BigQuery SQL → weekly funnel table → Tableau Public dashboard → opportunity sizing and A/B test proposal.
 > Data: GA4 obfuscated sample e-commerce dataset (Google Merchandise Store), 2020-11-02 to 2021-01-31.
 
-[![Dashboard preview](docs/images/dashboard.png)](https://public.tableau.com/app/profile/maksym.chobotar/viz/E-commerceFunnelPerfomance/E-commerceFunnelPerformance)
+[![Dashboard preview](docs/images/E-commerce_Funnel_Perfomance_Png.png)](https://public.tableau.com/app/profile/maksym.chobotar/viz/E-commerceFunnelPerfomance/E-commerceFunnelPerformance)
 
 **[→ Open the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/maksym.chobotar/viz/E-commerceFunnelPerfomance/E-commerceFunnelPerformance)**
 

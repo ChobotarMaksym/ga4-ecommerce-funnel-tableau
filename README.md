@@ -1,16 +1,28 @@
+# E-commerce Funnel Analysis: where to look for growth first
+
+> BigQuery SQL → weekly funnel table → Tableau Public dashboard → opportunity sizing and A/B test proposal.
+> Data: GA4 obfuscated sample e-commerce dataset (Google Merchandise Store), 2020-11-02 to 2021-01-31.
+
+[![Dashboard preview](docs/images/dashboard.png)](https://public.tableau.com/app/profile/maksym.chobotar/viz/E-commerceFunnelPerfomance/E-commerceFunnelPerformance)
+
+**[→ Open the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/maksym.chobotar/viz/E-commerceFunnelPerfomance/E-commerceFunnelPerformance)**
+
+## Business question
+Where in the funnel do we lose the most users, and does that differ by device?
+
 ## Key findings
+Out of 352,263 sessions, only 21.2% view a product at all - the single biggest drop in the
+funnel (277,527 sessions) happens before the product page, not after it. Once a visitor views
+a product, conversion through Add to Cart, Begin Checkout and Add Payment Info is nearly
+identical across desktop, mobile and tablet (within ~1pp of each other at most steps). Tablet
+shows a visibly different conversion at Add Payment Info and Purchase, but only 112 sessions
+back that comparison, far fewer than desktop (3,061) or mobile (2,151) - too small a sample to
+treat as a real pattern.
 
-This was an exploratory analysis, not a confirmed recommendation. The decision rule (fixed before
-looking at results: ≥5% lift in weekly purchases, ≥95% confidence) found **no segment with a
-large, reliable growth opportunity**. The closest candidate - Google-sourced traffic converting
-worse at Add to Cart (18.4% vs 20.7% for the rest) - is statistically credible but too small to
-act on, and the ranking is not stable between the first and second half of the period (Spearman
-0.54, 1/3 top segments overlap).
+**Takeaway:** the opportunity here is not in device-specific funnel optimization - it's in why
+~4 out of 5 sessions never reach a product page at all (traffic quality, landing page, site
+speed). Device-level differences beyond Begin Checkout need more data before acting on them.
 
-What the data does support: Add to Cart is the step with the highest *mechanical* leverage
-site-wide (a 1pp improvement there yields the largest relative gain in purchases), and ~36% of
-sessions with a valid order don't pass the strict sequential funnel - a data-quality question to
-resolve before trusting step conversions.
-
-**What I'd do next:** audit session-level event ordering, then re-test the Add to Cart segment
-finding with a properly powered sample.
+## Limitations
+Descriptive, not causal: this shows *where* the drop-off is, not *why*. The tablet segment is
+too small at the later funnel steps to draw conclusions from.

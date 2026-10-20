@@ -1,6 +1,6 @@
-# E-commerce Funnel Analysis: where to look for growth first
+# E-commerce Funnel Analysis: where do we lose the most users?
 
-> BigQuery SQL → weekly funnel table → Tableau Public dashboard → opportunity sizing and A/B test proposal.
+> BigQuery SQL → weekly funnel table → Tableau Public dashboard.
 > Data: GA4 obfuscated sample e-commerce dataset (Google Merchandise Store), 2020-11-02 to 2021-01-31.
 
 [![Dashboard preview](docs/images/E-commerce_Funnel_Performance.png)](https://public.tableau.com/app/profile/maksym.chobotar/viz/E-commerceFunnelPerfomance/E-commerceFunnelPerformance)
